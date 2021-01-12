@@ -1,3 +1,6 @@
+# plotMaker.py - Antonio J. Leal
+# Last review: 10/01/2021
+
 class FileManager:
     import pandas as pd
 
@@ -15,9 +18,7 @@ class FileManager:
             print(">> Dataframe succesfully generated from:", file_path)
             return df
         except FileNotFoundError:
-            pass
-        except:
-            pass
+            print("File not Found.")
 
 
     def df_to_file(self, data, file_path):
@@ -34,4 +35,4 @@ class FileManager:
             print(">> Dataframe succesfully saved at:", file_path)
             data.to_csv(path_or_buf=file_path, mode="w")
         except:
-            pass
+            print("The data could not be saved to file.")
